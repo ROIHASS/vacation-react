@@ -8,9 +8,7 @@ class App extends Component {
 
   async componentDidMount() {
     const rawResponse = await fetch('/isUserLogin')
-    debugger
     const bool = await rawResponse.json();
-    debugger
     await this.setState({ isUserLogin: bool })
   }
 

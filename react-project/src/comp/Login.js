@@ -49,7 +49,6 @@ class Login extends Component {
 
   async login() {
     if (this.state.UserName !== '' && this.state.Password !== '') {
-      debugger;
       const rawResponse = await fetch('/Login', {
         method: 'POST',
         headers: {
