@@ -16,12 +16,12 @@ class Vacations extends Component {
 
   render() {
     switch (this.state.switch) {
-      case 'AdminHomepage':
+      case 'AdminHomePage':
         return (
           <AdminHomepage apprefreshing={this.props.comp.bind(this)} comp={this.componentDidMount.bind(this)} />
         )
 
-      case 'UserHompage':
+      case 'UserHomePage':
         return (
           <UserHomepage apprefreshing={this.props.comp.bind(this)} />
         )

@@ -1,21 +1,20 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var session = require('express-session')
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const session = require('express-session')
 const fileUpload = require('express-fileupload');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
 
-var app = express();
+const app = express();
 
-var server = require('http').createServer(app); 
-var mySocketHelper= require('./utils/socketHelper');
+const server = require('http').createServer(app); 
+const mySocketHelper= require('./utils/socketHelper');
 mySocketHelper.connect(server);
 
-app.use(fileUpload()); // Don't forget this line!
+app.use(fileUpload());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -35,7 +34,6 @@ app.use(session({////use session
 }))
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

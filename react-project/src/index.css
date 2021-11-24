@@ -1,12 +1,25 @@
-body{
-  background-image: url('Travel.jpg');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Assistant", "Ariel", sans-serif;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  background-image: url("Travel.jpg");
   background-color: #cccccc; /* Used if the image is unavailable */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
- 
 }
-img{
+img {
   height: 150px;
   width: 250px;
 }
@@ -15,9 +28,9 @@ img{
   width: 250px;
 }
 
-.register{
+.register {
   border: solid 0.5px;
-  background: rgba(255,255,255, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   width: 370px;
   text-align: center;
   height: 440px;
@@ -26,9 +39,9 @@ img{
   border-radius: 20px;
 }
 
-.login{
+.login {
   border: solid 0.5px;
-  background: rgba(255,255,255, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   width: 370px;
   text-align: center;
   height: 310px;
@@ -36,9 +49,9 @@ img{
   margin-top: 90px;
   border-radius: 20px;
 }
-.vacation{
-  border:solid 0.5px;
-  background:rgba(255,255,255, 0.9);
+.vacation {
+  border: solid 0.5px;
+  background: rgba(255, 255, 255, 0.9);
   width: 275px;
   text-align: center;
   height: 480px;
@@ -50,83 +63,94 @@ img{
 
 .imgStyle {
   float: left;
-  margin-left: '530px';
-  margin-top: '210px';
+  margin-left: "530px";
+  margin-top: "210px";
 }
 
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
-  overflow:auto;
+  overflow: auto;
   font-family: cursive;
   outline: none;
   height: 160px;
   margin-bottom: 10px;
+  padding-right: 20px;
 }
 
-.divofbuttons{
-  float: right;
-  margin-bottom: 10px;
-  margin-right: 10px;
+.divofbuttons {
+  display: flex;
+  max-width: 100px;
+  justify-content: flex-end;
+  gap: 2px;
+  max-width: 270px;
   margin-top: 5px;
 }
 
+.divofbuttons > * {
+  flex: 1;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
 
 ul.ks-cboxtags {
-    list-style: none;
-    padding: 20px;
+  list-style: none;
+  padding: 20px;
 }
-ul.ks-cboxtags li{
+ul.ks-cboxtags li {
   display: inline;
 }
-ul.ks-cboxtags li label{
-    display: inline-block;
-    background-color: rgba(255, 255, 255, .9);
-    border: 2px solid rgba(139, 139, 139, .3);
-    color: #adadad;
-    border-radius: 25px;
-    white-space: nowrap;
-    margin: 3px 0px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: all .2s;
+ul.ks-cboxtags li label {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(139, 139, 139, 0.3);
+  color: #adadad;
+  border-radius: 25px;
+  white-space: nowrap;
+  margin: 3px 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s;
 }
 
 ul.ks-cboxtags li label {
-    padding: 8px 12px;
-    cursor: pointer;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
 ul.ks-cboxtags li label::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 12px;
-    padding: 2px 6px 2px 2px;
-    content:"\f0fe";
-    transition: transform .3s ease-in-out;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  padding: 2px 6px 2px 2px;
+  content: "\f0fe";
+  transition: transform 0.3s ease-in-out;
 }
 
 ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
-    content: "\f00c";
-    transform: rotate(-360deg);
-    transition: transform .3s ease-in-out;
+  content: "\f00c";
+  transform: rotate(-360deg);
+  transition: transform 0.3s ease-in-out;
 }
 
 ul.ks-cboxtags li input[type="checkbox"]:checked + label {
-    border: 2px solid #2886f1fd;
-    background-color: #2886f1fd;
-    color: #fff;
-    transition: all .2s;
+  border: 2px solid #2886f1fd;
+  background-color: #2886f1fd;
+  color: #fff;
+  transition: all 0.2s;
 }
 
 ul.ks-cboxtags li input[type="checkbox"] {
@@ -144,16 +168,16 @@ textarea::-webkit-scrollbar {
 
 /* Track */
 textarea::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0); 
+  background: rgba(255, 255, 255, 0);
 }
- 
+
 /* Handle */
 textarea::-webkit-scrollbar-thumb {
-  background: rgb(136, 181, 223); 
+  background: rgb(136, 181, 223);
   border-radius: 10px;
   height: 3px;
 }
 /* Handle on hover */
 textarea::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 50, 97, 0.493); }
-
+  background: rgba(0, 50, 97, 0.493);
+}

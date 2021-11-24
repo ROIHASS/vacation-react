@@ -1,10 +1,10 @@
-var mySocketHelper = {
+const mySocketHelper = {
     ioServer:null, 
     connect: function (server) { 
         var io = require('socket.io')(server);
         io.on('connection', function (socket) {
             console.log('someone connected');
-            //here we can send recieve data
+            //here we can send receive data
           //  socket.emit('msg', "welcome!!!!!");
             socket.on('msgClient', (data) => {
                 console.log(data);
